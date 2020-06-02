@@ -1,0 +1,44 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<main>
+  <header>
+    <h1 class="text-align" id="title">Working title</h1>
+    <p class="text-align" id="description">Working description</p>
+  </header>
+
+  <body>
+    <form id="survey-form">
+      <fieldset>
+        <legend>Personal Details</legend>
+        <br><label id="name-label" for="name">Name</label> <input id="name" required type="text" placeholder="Name"></input>
+        </br>
+        <br><label id="email-label" for="name">Email Id</label> <input id="email" type="email" required placeholder="Email id"></input>
+        </br>
+        <br><label id="number-label" for="name">Age</label> <input id="number" type="number" min="12" max="99" placeholder="Age"></input>
+        </br>
+        <br><input type="radio" name="gender" value="male"> Male</br>
+        <input type="radio" name="gender" value="female"> Female<br>
+      </fieldset>
+      <fieldset>
+        <legend>Professional Qualifications</legend>
+        <input list="dropdown" placeholder="Choose your Job Title" required>
+        <datalist id="dropdown">
+  <option value="Business / Product Analyst">
+    <option value="Human Resources">
+      <option value="Software Engineer">
+        <option value="Quality Analyst">
+          <option value="Finance Operations">
+            <option value="Legal Operations">
+              <option value="Other">
+           </datalist><br>
+         <br><textarea rows="4" cols="50" placeholder="Enter additional comments here">
+</textarea>
+         <br><input type="checkbox" name="T&C" value="T&C" required> I have read the Terms & Conditions<br>
+  <input type="checkbox" name="Subscribe" value="Subscribe"> I would like to receive marketing and promotional messages on my provided email<br>
+        <br><input id="submit" type="submit"><br>
+</fieldset>
+
+    </form>
+
+  </body>
+
+</main>

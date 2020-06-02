@@ -1,0 +1,29 @@
+.black-text {
+    color: black;
+  }
+  .black-border {
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4%;
+  }
+  .red-background {
+    background-color: #d40b29;
+  }
+  img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+  }
+  body {
+    background-color: #d40b29;
+    text-align: center;
+  }
+  ul{
+    max-width: 250px;
+    text-align: left;
+    margin: 0 auto 50px auto;
+    line-height: 1.5;
+  }
+  

@@ -1,0 +1,312 @@
+:root {
+  --hue: 210; /* Blue */
+  --accent-hue: 25; /* Orange */
+  font-size: 16px;
+  /* Light theme */
+  --c-light-text: #333;
+  --c-light-background: hsl(43, 54%, 92%);
+  --c-light-focus: hsl(var(--hue), 70%, 45%);
+  --c-light-interactive: hsl(var(--accent-hue), 90%, 70%);
+  --c-light-nav-list-interactive: hsl(var(--accent-hue), 50%, 50%);
+  --c-light-text-color-highlight: hsl(var(--hue), 70%, 45%);
+  --c-light-text-color-background: hsl(var(--accent-hue), 45%, 70%);
+  --c-light-project-tab: hsl(var(--accent-hue), 70%, 90%);
+  --c-light-border-color: hsl(var(--accent-hue), 70%, 45%);
+  
+  /* Dark theme */
+  --c-dark-text: hsl(var(--hue), 10%, 62%);;
+  --c-dark-background: hsl(var(--hue), 20%, 12%);
+  --c-dark-focus: hsl(var(--accent-hue), 70%, 45%);
+  --c-dark-interactive: hsl(var(--hue), 90%, 70%);
+  --c-dark-text-color-highlight: hsl(var(--accent-hue), 70%, 45%);
+  --c-dark-text-color-background: hsl(var(--hue), 45%, 70%);
+  --c-dark-project-tab: hsl(var(--hue), 70%, 90%);
+  --c-dark-border-color: hsl(var(--hue), 90%, 70%);
+  }
+
+.theme-container {
+  /* Make the light theme the default */
+  --c-text: var(--c-light-text);
+  --c-background: var(--c-light-background);
+  --c-focus: var(--c-light-focus);
+  --c-interactive: var(--c-light-interactive);
+   padding: 1.5rem;
+  color: var(--c-text);
+  background-color: var(--c-background);
+  --navigation-list: var(--c-light-nav-list-interactive);
+  --project-tab: var(--c-light-project-tab);
+  --border-color: var(--c-light-border-color);
+}
+
+.dark-mode-checkbox:checked ~ .theme-container {
+  /* Override the default theme */
+  --c-text: var(--c-dark-text);
+  --c-background: var(--c-dark-background);
+  --c-focus: var(--c-dark-focus);
+  --c-interactive: var(--c-dark-interactive);
+  --c-light-text-color-highlight: var(--c-dark-text-color-highlight);
+  --c-light-text-color-background : var(--c-dark-text-color-background);
+  --c-light-button-background: var(--c-dark-button-background);
+  --c-light-button-text-color: var(--c-dark-button-text-color);
+  --c-light-grid-background-color: var(--c-dark-grid-background-color);
+  --c-light-grid-border-color: var(--c-dark-grid-border-color);
+  --c-light-project-tab: var(--c-dark-project-tab);
+  --c-light-border-color: var(--c-dark-border-color);
+}
+
+.dark-mode-label {
+  margin-bottom: 1em;
+  float: right;
+}
+
+:focus,
+.dark-mode-checkbox:focus ~ .theme-container .dark-mode-label {
+  outline: 2px solid var(--c-focus);
+}
+
+
+/*
+* Replace original checkbox
+*/
+
+.dark-mode-label::before {
+  content: "\2610";
+}
+
+.dark-mode-checkbox:checked ~ .theme-container .dark-mode-label::before {
+  content: "\2611";
+}
+
+/*
+visibility-hidden utility class
+
+Source: https://github.com/h5bp/html5-boilerplate
+
+Hide only visually, but have it available for screen readers:
+https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+
+1. For long content, line feeds are not interpreted as spaces
+   and small width causes content to wrap 1 word per line:
+   https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap; /* 1. */
+}
+
+/*
+* Grow content to viewport
+*/
+
+/*
+1. Allows the body’s children to grow to
+   100% of the viewport’s height.
+*/
+html,
+body {
+  height: 100%; /* 1. */
+}
+
+/*
+1. Allows the content area to grow to the viewport height.
+*/
+body {
+  display: flex; /* 1. */
+  flex-direction: column; /* 1. */
+}
+
+/*
+1. Grows the content area to take up all the remaining height
+   inside the body element.
+*/
+.grow {
+  flex-grow: 1; /* 1. */
+}
+
+/*
+* Basic styles
+*/
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+h1, h2, h3, h4, h5{
+  text-align: center;
+}
+
+::selection{
+  color: var(--c-light-text-color-highlight);
+  background: var(--c-light-text-color-background);
+}
+::-moz-selection{
+  color: var(--c-light-text-color-highlight);
+  background: var(--c-light-text-color-background);
+}
+
+a {
+  color: var(--c-interactive);
+}
+
+.wrapper {
+  max-width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+}
+h1{
+  font-size: 6em;
+}
+
+#welcome-section {
+  box-sizing: border-box;
+  display: block;
+  height: 100vh;
+  width: 100%;
+ }
+
+ .slideout-sidebar {
+  position: fixed;
+  top: 0;
+  left: -205px;
+  z-index: 0;
+  width: 168px;
+  height: 100%;
+  padding: 20px;
+  background-color: var(--project-tab);
+  transition: all 300ms ease-in-out;
+}
+
+.slideout-sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slideout-sidebar ul li {
+  cursor: pointer;
+  padding: 18px 0;
+ }
+
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  position: absolute;
+  top: 18px;
+  left: 30px;
+  font-size: 24px;
+  z-index: 1;
+  transition: all 300ms ease-in-out;
+}
+
+#menu-toggle:checked ~ .slideout-sidebar {
+  left: 0px;
+}
+
+#menu-toggle:checked + .menu-icon {
+  left: 210px;
+}
+
+#menu-toggle:checked ~ .content-container {
+  padding-left: 190px;
+}
+
+.portfolio {
+  display: block;
+  overflow: hidden;
+  clear: both;
+  padding-top: 40px;
+  padding-bottom: 50px;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+ }
+
+.portfolio-container {
+  margin: auto;
+  max-width: auto;
+  align-content: center;
+  display: -webkit-flex;
+  -webkit-flex-flow: row wrap;
+  display: flex;
+  flex-flow: row wrap;
+ }
+.project-tile {
+  display: block;
+  margin: 5px auto 5px;
+  padding: 10px;
+  max-width: 320px;
+  border-radius: 3px;
+  background-color: var(--project-tab);
+  box-shadow: 0px 0px 1px hsl(0, 0%, 30%);
+  -webkit-box-shadow: 0px 0px 1px hsl(0, 0%, 30%);
+  -moz-box-shadow: 0px 0px 1px hsl(0, 0%, 30%);
+   transition: all ease-in-out 200ms;
+  -webkit-transition: all ease-in-out 200ms;
+  border: 4px solid var(--border-color);
+  }
+
+.project-tile img {
+  display: block;
+  max-width: 100%;
+}
+
+.project-tile a {
+  padding: 0;
+  color: var(--c-text);
+  text-decoration: none;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+}
+
+figure:hover {
+  box-shadow: 0px 0px 30px hsl(0, 0%, 30%);
+}
+
+.project-tab figcaption {
+  display: block;
+}
+
+figcaption p {
+  margin: 0;
+  padding: 0 3px;
+  font-size: 0.75em;
+  font-weight: 400;
+  color: var(--c-text);
+}
+figcaption a{
+  color: var(--c-interactive);
+}
+.text-center{
+  text-align: center;
+}
+@media (max-width: 1200px) {
+  .navigation {
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .navigation {
+    justify-content: center;
+  }
+}
+@media (max-width: 500px) {
+  .navigation {
+    justify-content: center;
+  }
+}

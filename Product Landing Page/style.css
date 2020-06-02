@@ -1,0 +1,174 @@
+#main{
+    font-size: 10px;
+    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Jim Nightshade', cursive;
+    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    margin: 20px 5px;
+    padding: 20px;
+    border-radius: 10px;
+    background: lightyellow;
+  }
+  body{
+    font-family: 'Shadows Into Night';
+    font-size: 1.5rem;
+    line-height: 1.5;
+    text-align: auto;
+    margin: 10;
+  }
+  #h1{
+    font-size: 4rem;
+    font-family: 'Jim Nightshade', cursive;
+    width: 33%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    margin-left: 20px;
+  }
+  #h2{
+    font-size: 2rem;
+    font-family: 'Titillium Web', sans-serif;
+    width: 33%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    margin-left: 20px;
+  }
+  p{
+    font-size: 2rem;
+    padding: 10;
+  }
+  .container {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #header-container{
+    display: flex;
+    width: 100%;
+    max-height: 200px;
+  }
+  #header-img{
+    width: 5vw;
+    display: flex;
+    flex-direction: row;
+  }
+  @media (max-width: 650px) {
+    .logo {
+      margin-top: 15px;
+      width: 100%;
+      position: relative;
+    }
+  }
+  #nav-bar {
+      margin-top: 10px;
+      width: 33%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 50px;
+      margin-left: 20px;
+    }
+  #ul{
+    width: 25vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: 'Open Sans';
+  }
+  #featuresul{
+    font-family: 'Titillium Web', sans-serif;
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: 'Open Sans';
+    text-align: left;
+    margin: 0 auto 50px auto;
+  }
+  #email-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 200px;
+    margin-top: 5px;
+  }
+  #email {
+    max-width: 275px;
+    width: 100%;
+    padding: 5px;
+  }
+  #features{
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    padding: 10px;
+    justify-content: center;
+  }
+  #what-you-get{
+    display: flex;
+    margin-top: 60px;
+    padding: 10px;
+    justify-content: center;
+  }
+  #pricing {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    }
+  .product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    width: calc(100%  / 3);
+    margin: 10px;
+    border: 1px solid #000;
+    border-radius: 3px;
+  }
+  .highlighter{
+    background-color: #ddd;
+    color: black;
+    padding: 15px 0;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+  }
+  .button{
+    max-width: 150px;
+    width: 100%;
+    height: 30px;
+    margin: 15px 0;
+    border: 0;
+    border-radius: 3px;
+    background-color: #f1c40f;
+    font-weight: bold;
+  }
+  .button :hover{
+    background-color: #0cd11d;
+    transition: background-color 1s;
+  }
+  .features-grid{
+    display: flex;
+  }
+  @media (max-width: 800px) {
+    #pricing {
+      flex-direction: column;
+    }
+    .product {
+      max-width: 300px;
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 10px;
+    }
+  }
